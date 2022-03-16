@@ -1,5 +1,16 @@
-let topLeft = document.querySelector('.rectangle').style.border-top-left-radius;document.querySelector('.rectangle').style.border-top-left-radius;
-let topRight = document.querySelector('.rectangle').style.border-top-left-radius;document.querySelector('.rectangle').style.border-top-right-radius;
-let bottomLeft = document.querySelector('.rectangle').style.border-bottom-left-radius;document.querySelector('.rectangle').style.border-top-left-radius;
-let bottomRight = document.querySelector('.rectangle').style.border-top-left-radius;document.querySelector('.rectangle').style.border-bottom-right-radius;
+const root = document.documentElement;
 
+const change = document.querySelector(".change");
+change.addEventListener('click', function(){
+
+const tl = document.querySelector('.Top-left').value;
+const tr = document.querySelector('.Top-right').value;
+const bl = document.querySelector('.Bottom-left').value;
+const br = document.querySelector('.Bottom-right').value;
+
+root.style.setProperty("--topleftradius", tl + "px");
+root.style.setProperty("--toprightradius", tr + "px");
+root.style.setProperty("--bottomleftradius", bl + "px");
+root.style.setProperty("--bottomrightradius", br + "px");
+
+});
